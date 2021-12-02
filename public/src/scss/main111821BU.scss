@@ -1,0 +1,307 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  // background-image: url("/var/www/gpr1nce.github.io/crumpy.jpg");
+
+}
+
+/* crumply paper background? */
+.crumply {
+  background-image: url("/var/www/gpr1nce.github.io/crumpy.jpg");
+  /* background-color: blue; */
+}
+
+// 11/16 lab CSS adds 
+
+// $primary-font-stack: "Helvetica Neue",Helvetica,Arial,sans-serif;
+// $primary-color: #333;
+
+/* mixins */
+
+/** clear floats */
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* universal settings */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/* Utility Classes */
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+// clear the column formatting after competencies 
+.row:after {
+  content: "";
+  display: contents;
+}
+
+/** Columns */
+header {
+  background: #000;
+  color: #fff;
+  line-height: 50px;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  min-height: 100px;
+  padding: 1rem;
+}
+
+.col {
+  padding: .5rem;
+
+  /* debug */
+  // border: 1px solid #990000;
+  background: #fff;
+}
+
+.col-4{
+  @extend .col;
+  grid-column:  span 4;
+  grid-row: 1;
+  // width: 20%;
+}
+
+.col-3{
+  @extend .col;
+  grid-column:  span 3;
+  grid-row: 1;
+  // width: 40%;
+
+}
+
+.col-2{
+  @extend .col;
+  grid-column:  span 2;
+  grid-row: 1;
+  // width: 40%;
+}
+
+.col-1{
+  @extend .col;
+  grid-column:  span 1;
+  grid-row: 1;
+  // width: 20%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  @extend .container;
+}
+
+aside{
+  grid-column:  1;
+  grid-row: 1;
+  background: #ccc;
+}
+
+main {
+  grid-column: span 1 / 3;
+  grid-row: 1;
+  // background: #aaa;
+  margin: 0 auto;
+}
+
+
+/* trying aside format for biggest callout ? */
+.hdr {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  }
+
+  .sectDetail {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    border: darkblue solid 2px;
+  }
+  
+  .sectBulletDetail {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    border: red solid 2px;
+  }
+  
+    
+
+//   aside {
+//   margin-top: 0;
+//   padding: 0 20px 20px 20px;
+//   background-color: paleturquoise;
+//   font-weight: bold;
+//   text-align: center;
+//   border: #000 2px solid;
+//   border-radius: 50%;
+
+
+// }
+
+/* li span {
+  position: relative;
+  left: -10px;
+  padding: 0 20px 20px 20px;
+} */
+
+
+.slugline {
+  font-size: small;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* need rule to move bulleted lists in so bullets fall under unbulleted text  */
+/* ul {
+  width: 95%;
+  padding: 20px;
+} */
+
+/* need to nest one div up against another (two col ULs) */
+// .float-container {
+//   /* border: 3px solid #fff; */
+//   padding: 0;
+//   margin: 0;
+// }
+
+/* (borders removed after testing) 
+    first floating element has all 4 borders */
+// .float-child-first {
+//   width: 45%;
+//   float: left;
+//   padding: 2px;
+//   margin-left: 20px;
+//   /* border: 2px solid red; */
+// }  
+
+/* all additional floatees should drop left border */
+// .float-child-add {
+//   width: 45%;
+//   float: left;
+//   padding: 2px;
+//   /* border:2px solid red;
+//   border-width: 2px 2px 2px 0; */
+// }  
+
+/* pseudo-element for clearing float-container automatically */
+// .float-container::after {
+//   content: "";
+//   display: block;
+//   clear: left;
+// }
+
+/* all below is pre-restyling wkend asst */
+.avatar {
+    border-radius: 50%; 
+    float: left; 
+    margin-right: 1em;
+  }
+
+
+  header {
+    height: 50px;
+    background: #000;
+    color: #fff;
+    padding: 0 .5rem 0 1rem;
+  }
+  
+  header .logo{
+    line-height: 50px;
+    font-weight: bold;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav ul li{
+    display: inline;
+  }
+  
+  nav ul li a,
+  nav ul li a:link,
+  nav ul li a:visited{
+    display: inline-block;
+    padding: 0 .5rem;
+    color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover{
+    background: #444;
+  }
+  
+  main {
+    /* Use a margin to center the page */
+    margin: 0 auto;
+  
+    /* Set the width of the content */
+    width: 960px;
+  
+    /* For smaller screens to not exceed the max screen width */
+    max-width: 100%;
+  }
+
+#toggleMenu {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 960px)  
+  {
+    main {
+      max-width: 90%;
+    }
+  
+    header {
+      position: relative;
+    }
+  
+    #toggleMenu {
+      display: block;
+      float: right;
+      line-height: 50px;
+    }
+
+  
+    nav {
+      position: absolute;
+      display: none;
+      background: #000;
+      top: 50px;
+      left: 0;
+      right: 0;
+    }
+  
+    nav ul li a,
+    nav ul li a:link,
+    nav ul li a:visited{
+      display: block;
+      border-bottom: 1px solid #777;
+    }
+  }
