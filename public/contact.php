@@ -60,7 +60,7 @@ if(empty($valid->errors) && !empty($input)){
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Contact Me - YOUR-NAME</title>
+    <title>Contact Me - gpr1nce</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/css/main.css" type="text/css">
   </head>
@@ -71,15 +71,15 @@ if(empty($valid->errors) && !empty($input)){
       <a id="toggleMenu">Menu</a>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="resume.php">Resume</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
     </header>
     
     <main>
-      <h1>Contact Me - YOUR-NAME</h1>
+      <h1>Contact Me - gpr1nce</h1>
 
       <?php echo (!empty($message)?$message:null); ?>
 
