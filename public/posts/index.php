@@ -1,5 +1,7 @@
 <?php
 include '../../core/db_connect.php';
+require '../../core/session.php';
+checkSession();
 
 $content=null;
 $stmt = $pdo->query("SELECT * FROM posts");

@@ -2,8 +2,9 @@
 require '../../core/functions.php';
 require '../../config/keys.php';
 require '../../core/db_connect.php';
-// require '../../core/session.php';
-// checkSession();
+require '../../core/session.php';
+
+checkSession();
 //Build the page metadata
 $meta = [];
 $meta['description'] = "User Add gpr1nce github";

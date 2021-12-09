@@ -1,5 +1,8 @@
 <?php
 require '../../core/db_connect.php';
+require '../../core/session.php';
+checkSession();
+
 
 //Build the page metadata
 $meta = [];

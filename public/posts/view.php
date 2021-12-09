@@ -1,5 +1,7 @@
 <?php
 include '../../core/db_connect.php';
+require '../../core/session.php';
+checkSession();
 
 
 $input = filter_input_array(INPUT_GET);
