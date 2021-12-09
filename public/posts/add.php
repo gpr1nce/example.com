@@ -33,7 +33,7 @@ if(!empty($input)){
         $slug,
         $input['body']
     ])){
-       header('LOCATION:/posts');
+       header('LOCATION:/example.com/public/posts');
     }else{
         $message = 'Something bad happened';
     }
