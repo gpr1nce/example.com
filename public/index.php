@@ -6,7 +6,7 @@ $meta=[];
 $meta['description'] = "MicroTrain2111 Site For Web Development West Loop";
 $meta['title']="MicroTrain, Site, Web Development, West Loop";
 
-$content="<h1>MicroTrains Users</h1>";
+$content="<h1>gpr1nce site Users</h1>";
 $stmt = $pdo->query('SELECT * FROM users');
 
 while($row = $stmt->fetch()){

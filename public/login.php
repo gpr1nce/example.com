@@ -32,6 +32,10 @@ if(!empty($input)){
             // 6.2 Redirect the user
             // header('LOCATION: ' . $_POST['goto']);
             header('LOCATION:index.php');
+            // $message="<div>Successfully logged on.</div>";
+        }
+        else {
+            $message="<div class=\"alert alert-danger\">User authentication failed!</div>";
         }
     }
 }
@@ -59,6 +63,7 @@ $content=<<<EOT
             type="password"
         >
     </div>
+    {$message}
     <input name="goto" value="{$goto}" type="hidden">
     <input type="submit" class="btn btn-primary">
 </form>
