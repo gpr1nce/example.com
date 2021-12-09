@@ -1,5 +1,5 @@
 <?php
-require '../core/session.php';
+require '../core/bootstrap.php';
 
 //Write an empty array to the session
 $_SESSION=[];

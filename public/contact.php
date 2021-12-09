@@ -1,6 +1,10 @@
 <?php
 
-require './core/processContactForm.php';
+require '../core/processContactForm.php';
+//Build the page metadata
+$meta = [];
+$meta['description'] = "Contact MicroTrain2111";
+$meta['keywords'] = "contact, web development, application development, MicroTrain2111";
 
 $content = <<<EOT
 <form action="contact.php" method="POST">
@@ -43,4 +47,3 @@ $content = <<<EOT
 EOT;
 
 include '../core/layout.php';
-

@@ -1,7 +1,7 @@
 <?php
-require '../../config/keys.php';
+require '../../core/bootstrap.php';
 require '../../core/db_connect.php';
-require '../../core/session.php';
+
 
 //Build the page metadata
 $meta = [];
