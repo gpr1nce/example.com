@@ -12,6 +12,9 @@ $stmt = $pdo->query('SELECT * FROM users');
 while($row = $stmt->fetch()){
   $content .= "<div><a href=\"view.php?id={$row['id']}\">{$row['first_name']} {$row['last_name']}</a></div>";
 }
+// show admin status?
+// doesn't work yet
+$content .= "<br><hr><div>{$row['role']}</div><br><hr>";
 
 $content .= "<br><hr><div><a href=\"users\index.php\">Users</a></div><br>";
 $content .= "<br><hr><div><a href=\"posts\index.php\">Posts</a></div><br>";

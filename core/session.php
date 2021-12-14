@@ -1,8 +1,9 @@
 <?php
 //Any page that  works with session data MUST include session_start()
-session_start();
+// session_start();
 
 //Redirects a user to a login page if there is no active session
+if(!function_exists('checkSession')){
 function checkSession(){
 
   $goto='/';
@@ -18,5 +19,5 @@ function checkSession(){
     $qs = !empty($_SERVER['QUERY_STRING'])?"?{$_SERVER['QUERY_STRING']}":false;
     header('Location: /login.php?goto='.$goto.$qs);
   }
-
 }
+};

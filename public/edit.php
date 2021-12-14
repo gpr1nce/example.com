@@ -7,8 +7,8 @@ checkSession();
 
 //Build the page metadata
 $meta = [];
-$meta['description'] = "User Edit MicroTrain2111";
-$meta['keywords'] = "user, edit, MicroTrain2111";
+$meta['description'] = "User Edit gpr1nce";
+$meta['keywords'] = "user, edit, gpr1nce";
 
 // Get the user 
 $get = filter_input_array(INPUT_GET);
@@ -104,6 +104,15 @@ $content = <<<EOT
     <input type="submit" value="Submit" class="btn btn-primary">
 </div>
 </form>
+
+// formatting from layout.php for buttons
+<nav class="top-nav">
+<ul role="navigation">        
+<li class="nav-item">
+<a class="nav-link" href="resetpwd.php">Change Password</a>
+</li>
+</ul>
+
 <br><hr><br>
 EOT;
 

@@ -2,8 +2,8 @@
 require '../core/bootstrap.php';
 require '../core/db_connect.php';
 
-checkSession();
-
+// checkSession();
+session_start();
 
 //Build the page metadata
 $meta = [];
@@ -26,12 +26,12 @@ $row = $stmt->fetch();
 $content=<<<EOT
 <h1>{$row['first_name']} {$row['last_name']}</h1>
 {$row['email']}
-
-<hr>
+<br>
+{$row['role']}
 <div>
-<a class="btn btn-link" href="edit.php?id={$row['id']}">Edit</a>
-<a class="btn btn-link" href="delete.php?id={$row['id']}">Delete</a>
-<br><br>
+    <a class="btn btn-link" href="edit.php?id={$row['id']}">Edit</a>
+    <br><a class="btn btn-link" href="delete.php?id={$row['id']}">Delete</a>
+    <br><a class="btn btn-link" href="resetpwd.php?id={$row['id']}">Change Password</a>
 </div>
 EOT;
 
