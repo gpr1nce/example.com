@@ -3,9 +3,9 @@
 require '../core/bootstrap.php';
 require '../core/About/src/Validation/Validate.php';
 require '../core/functions.php';
-require '../config/keys.php';
+// require '../config/keys.php';
 require '../core/db_connect.php';
-require '../core/session.php';
+// require '../core/session.php';
 // checkSession();
 
 use About\Validation;
